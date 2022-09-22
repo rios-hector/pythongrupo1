@@ -1,0 +1,110 @@
+BODY {
+    background: lightyellow;
+}
+
+.flex-containerh > div > a:link, a:visited, a:active {
+    color: lightblue;
+    text-decoration: none;
+}
+
+.flex-containerh > div > a:hover {
+    color: white;
+    background-color: lightblue;
+    padding: 9px;
+}
+
+H1, H2 {
+    text-align: center;
+    color: red;
+}
+
+.ejemplo {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.flex-containerh {
+    display: flex;
+    /* Esta propiedad define al div como contenedor flex*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*No olvidar! (permite el "desbordamiento" hacia la linea siguiente) */
+    background-color: lightblue;
+    height: 1hw;
+    /*Le damos espacio al contenedor para que el contenido fluya en su interior */
+    align-content: center;
+    justify-content: center;
+}
+
+.flex-container {
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    /*Horizontal*/
+    align-items: center;
+    /*Vertical  */
+    background-color: lightblue;
+}
+
+.item1 {
+    color: black;
+    background-color: white;
+    padding: 30px;
+}
+
+/*Cada uno de los hijos flexibles que tendrá el contenedor horizontal en su interior. */
+.flex-containerh>div {
+    /*Utilizamos selectores avanzados en lugar de clases */
+    color: white;
+    background-color: green;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+a:link,
+a:visited,
+a:active {
+    color: lightblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background-color: lightblue;
+}
+
+.ocultar{
+    display: none;
+}
+
+
+
+
+
+
+/* Pantallas de menos de 600 píxeles 
+  (Ancho máximo hasta 600px)*/
+@media only screen and (max-width: 600px) {
+    .ejemplo {
+        background: red;
+    }
+}
+
+/* Pantallas a partir de 600 píxeles 
+  (Ancho como mínimo de 600px)*/
+@media only screen and (min-width: 600px) {
+    .ejemplo {
+        background: green;
+    }
+}
+
+/* Pantallas de mas de 768 y menos de 992 píxeles */
+/*(Ancho como mínimo de 992px)*/
+@media only screen and (min-width: 992px) {
+    .ejemplo {
+        background: orange;
+    }
+}
